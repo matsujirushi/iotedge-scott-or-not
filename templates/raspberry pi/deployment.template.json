@@ -36,7 +36,7 @@
             "restartPolicy": "always",
             "settings": {
               "image": "${MODULES.StartupContainer.arm32v7}",
-              "createOptions": "{\"Env\": [\"DEVICE=RPI\", \"AZURE_ML_HOSTNAME=CustomVisionContainer\"],\"HostConfig\": { \"Binds\": [\"/home/pi/image:/home/pi/image\", \"/dev:/dev\", \"/etc/RTIMULib.ini:/etc/RTIMULib.ini\", \"/usr/lib/python2.7/dist-packages:/usr/lib/python2.7/dist-packages\" ],  \"Privileged\": true, \"PortBindings\":{\"8082/tcp\":[{\"HostPort\":\"8082\"}]}}}"
+              "createOptions": "{\"Env\": [\"DEVICE=RPI\", \"AZURE_ML_HOSTNAME=CustomVisionContainer\"],\"HostConfig\": { \"Binds\": [\"/home/pi/image:/home/pi/image\", \"/dev:/dev\", \"/usr/local/lib/python2.7/dist-packages/RTIMU.so:/usr/local/lib/python2.7/dist-packages/RTIMU.so\", \"/usr/local/lib/python2.7/dist-packages/RTIMULib-7.2.1b1.dist-info:/usr/local/lib/python2.7/dist-packages/RTIMULib-7.2.1b1.dist-info\" ],  \"Privileged\": true, \"PortBindings\":{\"8082/tcp\":[{\"HostPort\":\"8082\"}]}}}"
             }
           },
           "CustomVisionContainer": {

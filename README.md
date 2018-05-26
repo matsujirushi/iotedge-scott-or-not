@@ -16,6 +16,14 @@ This is a code sample for an IoT Edge solution that takes images from a camera f
 * Azure IoT Hub
 
 If you plan to run on a Raspberry Pi, it's recommended to use a Raspberry Pi 3 with a `picamera` enabled camera and a SenseHat running linux.
+```bash
+$ sudo raspi-config
+-> 5 Interfacing Options
+--> P1 Camera
+-> 5 Interfacing Options
+--> P5 I2C
+$ sudo pip install RTIMULib==7.2.1b1
+```
 
 If you plan to run on a Windows PC, be sure to [read the following](#running-the-solution-on-a-windows-machine)
 
